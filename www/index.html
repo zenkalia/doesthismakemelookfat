@@ -23,15 +23,16 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="lib/topcoat/css/topcoat-mobile-light.min.css" />
         <title>Hello World</title>
     </head>
     <body>
         <div class="app">
             <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
+            <div id="deviceready">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">
-                  <button onclick='photothing()'>Pix plz</button>
+                  <button class="topcoat-button" onclick="photothing()">Pix plz</button>
                 </p>
             </div>
         </div>
