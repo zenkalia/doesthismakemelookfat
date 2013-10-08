@@ -40,13 +40,10 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             function photo_success(image_data) {
-              alert('yay dude');
-            }
-            function photo_fail(message) {
-              alert('bummer dude:' + message);
+              alert(compliments.sample());
             }
             function photothing() {
-              navigator.camera.getPicture(photo_success, photo_fail, { quality: 50,
+              navigator.camera.getPicture(photo_success, null, { quality: 50,
                 destinationType: Camera.DestinationType.FILE_URI
               });
             }

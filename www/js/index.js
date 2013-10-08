@@ -47,3 +47,14 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+var compliments = {
+  items: [
+    "You're so hot",
+    ":)",
+    "No you look amazing~"
+  ],
+  sample: function() {
+    return this.items[Math.floor(Math.random()*this.items.length)];
+  }
+};
