@@ -58,3 +58,15 @@ var compliments = {
     return this.items[Math.floor(Math.random()*this.items.length)];
   }
 };
+function photo_success(image_data) {
+  $("#my-photo").attr('src', image_data);
+  $("#my-compliment").html(compliments.sample());
+  $("#main").addClass('hidden');
+  $("#confirm").removeClass('hidden');
+}
+function photothing() {
+  $("#upload-progress").attr('style', 'width:80%');
+  navigator.camera.getPicture(photo_success, null, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI
+  });
+}
