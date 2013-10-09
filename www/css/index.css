@@ -112,3 +112,8 @@ h1 {
   font-size:20px;
   font-weight:normal;
 }
+
+.topcoat-progress-bar {
+  margin-left: -15px !important;
+  width: 265px;
+}

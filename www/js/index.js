@@ -58,14 +58,30 @@ var compliments = {
     return this.items[Math.floor(Math.random()*this.items.length)];
   }
 };
-function photo_success(image_data) {
-  $("#my-photo").attr('src', image_data);
+function show_compliment() {
   $("#my-compliment").html(compliments.sample());
   $("#main").addClass('hidden');
   $("#confirm").removeClass('hidden');
 }
+function photo_success(image_data) {
+  $("#my-photo").attr('src', image_data);
+  $progress = 0;
+  $("#upload-progress").attr('style', 'width:'+$progress+'%');
+  $("#deviceready").addClass('hidden');
+  $("#progress-bar").removeClass('hidden');
+  (function step() {
+    $("#upload-progress").attr('style', 'width:'+$progress+'%');
+    $progress += Math.floor(Math.random() * 15);
+    if ($progress < 100) {
+      setTimeout(step, 200);
+    } else {
+      $("#progress-bar").addClass('hidden');
+      show_compliment();
+      $("#deviceready").removeClass('hidden');
+    }
+  })();
+}
 function photothing() {
-  $("#upload-progress").attr('style', 'width:80%');
   navigator.camera.getPicture(photo_success, null, { quality: 50,
     destinationType: Camera.DestinationType.FILE_URI
   });

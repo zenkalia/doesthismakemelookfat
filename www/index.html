@@ -29,18 +29,18 @@
     </head>
     <body>
         <div id= "main" class="app">
-            <h1>Does this make me look fat?</h1>
-            <div id="deviceready">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">
-                  <button class="topcoat-button--large" onclick="photothing()">Ask our consultants</button>
-                  <!--<button class="topcoat-button--large" onclick="photo_success()">Ask our consultants</button>-->
-                </p>
+           <h1>Does this make me look fat?</h1>
+           <div id="deviceready">
+              <p class="event listening">Connecting to Device</p>
+              <p class="event received">
+                <button id="photo-button" class="topcoat-button--large" onclick="photothing()">Ask our consultants</button>
+              </p>
+           </div>
+          <div id="progress-bar" class="hidden">
+            Uploading...
+            <div class='topcoat-progress-bar'>
+              <span id="upload-progress" class='progress' style='width:0%'></span>
             </div>
-        </div>
-        <div id="progress-bar" class="hidden">
-          <div class='topcoat-progress-bar'>
-            <span id="upload-progress" class='progress' style='width:0%'></span>
           </div>
         </div>
         <div id="confirm" class="hidden">
