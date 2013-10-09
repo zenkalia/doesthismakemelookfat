@@ -48,16 +48,6 @@ var app = {
     }
 };
 
-var compliments = {
-  items: [
-    "You're so hot",
-    ":)",
-    "No you look amazing~"
-  ],
-  sample: function() {
-    return this.items[Math.floor(Math.random()*this.items.length)];
-  }
-};
 function show_compliment() {
   $("#my-compliment").html(compliments.sample());
   $("#main").addClass('hidden');
@@ -95,3 +85,49 @@ function photothing() {
     destinationType: Camera.DestinationType.FILE_URI
   });
 }
+
+var compliments = {
+  items: [
+    "You're so hot",
+    ":)",
+    "No you look amazing~",
+    "I’d hit it.",
+    "I don’t know why you even asked.",
+    "This app isn’t for you if you’re that pretty.",
+    "No, you’re looking great.",
+    "I don’t think you know what fat is.",
+    "Beautiful!",
+    "Gorgeous!",
+    "Can I get your number? ;)",
+    "ASL?",
+    "I never thought girls could be this hot on the internet.",
+    "HOT!",
+    "Dude, you look amazing.",
+    "No, you couldn’t look fat in a fat suit.",
+    "Can I get more pics?",
+    "How do I message you on this thing?",
+    "You’re awesome and deserve the best.",
+    "Is that a keg in your pants? because damn, I’d like to tap that ass.",
+    "You look pretty today",
+    "you are beautiful and should know it",
+    "You might be the prettiest girl I've ever seen",
+    "Now that's tasteful without being gaudy",
+    "You need to hit the bars in that!",
+    "If I told you to try another outfit, would that mean I could see another photo of you?",
+    "YOU ARE SO DAMN LOVABLE.  STOP BEING SO DAMN LOVABLE.",
+    "Man, you are the first hot chick I've seen on here today.",
+    "Looks fine to me.",
+    "A++++ would judge again",
+    "Definitely cute.",
+    "<3",
+    "Total babe :D",
+    "Smokin' hot.",
+    "Anyone who calls you fat must be blind",
+    "No, you're looking HOT.",
+    "Hot mama!",
+    "no that doesn't make you look fat."
+  ],
+  sample: function() {
+    return this.items[Math.floor(Math.random()*this.items.length)];
+  }
+};
