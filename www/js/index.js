@@ -64,6 +64,8 @@ function show_compliment() {
   $("#confirm").removeClass('hidden');
 }
 function photo_success(image_data) {
+  $("#main").removeClass('hidden');
+  $("#confirm").addClass('hidden');
   $("#my-photo").attr('src', image_data);
   $progress = 0;
   $("#upload-progress").attr('style', 'width:'+$progress+'%');
