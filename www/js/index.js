@@ -71,7 +71,14 @@ function photo_success(image_data) {
   $("#progress-bar").removeClass('hidden');
   (function step() {
     $("#upload-progress").attr('style', 'width:'+$progress+'%');
-    $progress += Math.floor(Math.random() * 15);
+    $progress += Math.floor(Math.random() * 8);
+    if ($progress <50) {
+      $("#judge-text").addClass('hidden');
+      $("#upload-text").removeClass('hidden');
+    } else {
+      $("#upload-text").addClass('hidden');
+      $("#judge-text").removeClass('hidden');
+    }
     if ($progress < 100) {
       setTimeout(step, 200);
     } else {
