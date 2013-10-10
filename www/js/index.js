@@ -48,6 +48,20 @@ var app = {
     }
 };
 
+var designWidth = 320; // zoom to fit this ratio
+var scaleChange = 1; // % change in scale from above #s
+
+function zoomScreen() {
+  var docWidth = window.outerWidth;
+  var docHeight = window.outerHeight;
+
+  if (docWidth != designWidth) {
+    var scaleX = docWidth / designWidth;
+    $('body').css('zoom', scaleX);
+    scaleChange = scaleX;
+  }
+}
+
 function show_compliment() {
   $("#my-compliment").html(compliments.sample());
   $("#main").addClass('hidden');
