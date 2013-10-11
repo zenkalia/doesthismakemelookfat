@@ -1,3 +1,4 @@
 .DS_Store
 *.keystore
 *.apk
+platforms/android/bin
