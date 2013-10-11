@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.doesthismakemelookfat"
-  version="1.0.1" xmlns="http://www.w3.org/ns/widgets"
-  versionCode="2"
-  xmlns:gap="http://phonegap.com/ns/1.0">
+  version="1.0.2" xmlns="http://www.w3.org/ns/widgets" versionCode="3" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>DoesThisMakeMeLookFat</name>
     <description>
         Hello World sample application that responds to the deviceready event.
