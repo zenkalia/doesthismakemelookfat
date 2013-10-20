@@ -1,2 +1,2 @@
-/Users/mike/Code/DoesThisMakeMeLookFat/platforms/android/bin/AndroidManifest.xml : \
-/Users/mike/Code/DoesThisMakeMeLookFat/platforms/android/AndroidManifest.xml \
+/Users/mike/Code/doesthismakemelookfat/platforms/android/bin/AndroidManifest.xml : \
+/Users/mike/Code/doesthismakemelookfat/platforms/android/AndroidManifest.xml \
