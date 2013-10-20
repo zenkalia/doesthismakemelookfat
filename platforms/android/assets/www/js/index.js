@@ -95,8 +95,10 @@ function photo_success(image_data) {
   })();
 }
 function photothing() {
-  navigator.camera.getPicture(photo_success, null, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI
+  navigator.camera.getPicture(photo_success, null, {
+    quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI,
+    correctOrientation: true
   });
 }
 
