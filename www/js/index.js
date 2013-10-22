@@ -20,7 +20,6 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        zoomScreen();
     },
     // Bind Event Listeners
     //
@@ -28,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('resume', this.onResume, false);
     },
     // deviceready Event Handler
     //
@@ -35,6 +35,10 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        zoomScreen();
+    },
+    onResume: function() {
+        zoomScreen();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
