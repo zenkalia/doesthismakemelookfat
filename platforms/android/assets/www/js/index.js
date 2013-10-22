@@ -146,7 +146,16 @@ var compliments = {
     "Anyone who calls you fat must be blind",
     "No, you're looking HOT.",
     "Hot mama!",
-    "no that doesn't make you look fat."
+    "no that doesn't make you look fat.",
+    "Hello, good looking...",
+    "You look fine.",
+    "Looking good.",
+    "How can anyone be so gorgeous.",
+    "Why are you even on this app when you look like that?",
+    "No, you look good.",
+    "No, you look fine.",
+    "You are breath taking.",
+    "Is it hot in here or is it just you?"
   ],
   sample: function() {
     return this.items[Math.floor(Math.random()*this.items.length)];
