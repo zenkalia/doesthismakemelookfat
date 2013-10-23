@@ -40,7 +40,7 @@ body {
     background: url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
-    top:40%;
+    top:30%;
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
     text-align:center;
@@ -71,8 +71,6 @@ h1 {
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
     padding:2px 0px;
 }
 
