@@ -135,6 +135,7 @@ var compliments = {
     "Now that's tasteful without being gaudy",
     "You need to hit the bars in that!",
     "If I told you to try another outfit, would that mean I could see another photo of you?",
+    "No, you look fine.",
     "YOU ARE SO DAMN LOVABLE.  STOP BEING SO DAMN LOVABLE.",
     "Man, you are the first hot chick I've seen on here today.",
     "Looks fine to me.",
@@ -153,12 +154,20 @@ var compliments = {
     "How can anyone be so gorgeous.",
     "Why are you even on this app when you look like that?",
     "No, you look good.",
-    "No, you look fine.",
     "You are breath taking.",
     "Is it hot in here or is it just you?"
   ],
   sample: function() {
-    return this.items[Math.floor(Math.random()*this.items.length)];
+    var compliment_index = parseInt(window.localStorage.getItem('compliment_index'))
+    if (!compliment_index) {
+      var compliment_index = Math.floor(Math.random()*this.items.length)
+    }
+    compliment_index += 1;
+    if (compliment_index >= this.items.length) {
+      compliment_index = 0;
+    }
+    window.localStorage.setItem('compliment_index', compliment_index);
+    return this.items[compliment_index];
   }
 };
 
